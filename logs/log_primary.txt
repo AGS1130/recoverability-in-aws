@@ -1,0 +1,40 @@
+$ mysql -h primary-db.ctqi20duqz1y.us-east-2.rds.amazonaws.com -D udacity -u admin -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 33
+Server version: 8.0.20 Source distribution
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW TABLES;
+Empty set (0.00 sec)
+
+mysql> CREATE TABLE sample_table (message CHAR(20));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> show tables;
++-------------------+
+| Tables_in_udacity |
++-------------------+
+| sample_table      |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> NSERT INTO sample_table VALUES ('HELLO WORLD');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> SELECT * FROM sample_table;
++-------------+
+| message     |
++-------------+
+| HELLO WORLD |
++-------------+
+1 row in set (0.00 sec)
+
+mysql>

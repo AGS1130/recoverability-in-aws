@@ -13,3 +13,4 @@ CloudFormation allows you to use a configuration file written in a YAML file to 
 - `cloudformation`: This directory contains the CloudFormation template.
 - `s3`: This directory contains files for the static website.
 - `screenshots`: This directory contains all the screenshots taken at time of doing project.
+- `logs`: This directory contains the logs for needed for the project.

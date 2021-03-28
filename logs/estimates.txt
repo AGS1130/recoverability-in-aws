@@ -1,0 +1,35 @@
+The following estimates are taken into consideration with an active, on-call staff (everyone is awake and on-site/ready).
+
+Minimum RTO for a single AZ outage
+
+The time it takes to start up a new RDS instance in a new AZ can take less than ten minutes.
+
+Minutes:
+1: Problem occurs
+2-7: An alert is triggered
+8-10: Automatically switch to second availability zone
+
+
+Minimum RTO for a single region outage
+
+The time it takes to switch to the read replica in another region can take 5 minutes.
+Solving the issue for the primary region can take an hour
+
+Minutes:
+1: Problem occurs
+2-7: An alert is triggered
+8-10: Automatically switch to second availability zone
+11-30: Discovery for issue in primary region
+31-50: Diagnose problem and execute solution for patch
+50-60: Issue resolved and primary region stable
+
+
+Minimum RPO for a single AZ outage
+
+RDS has point in time restore available which minimizes data loss as the system fails over from one instance to another.
+RPO should be zero.
+
+Minimum RPO for a single region outage
+
+Read replicas are asynchronous aim and kept up to date with the primary DB.
+RPO should be zero, critical edge cases can be ten minutes give or take.
