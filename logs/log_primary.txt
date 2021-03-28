@@ -26,7 +26,7 @@ mysql> show tables;
 +-------------------+
 1 row in set (0.00 sec)
 
-mysql> NSERT INTO sample_table VALUES ('HELLO WORLD');
+mysql> INSERT INTO sample_table VALUES ('HELLO WORLD');
 Query OK, 1 row affected (0.02 sec)
 
 mysql> SELECT * FROM sample_table;
